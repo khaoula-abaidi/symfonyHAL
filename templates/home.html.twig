@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="jumbotron text-center text-danger">
+    Les Documents non encore publiés
+</div>
+<div class="container">
+    <div class="row flex">
+        {% for document in documents %}
+        <div class="col-3">
+            <h2 class="btn-danger">{{ document.idhal }}</h2>
+            <h3> {{ document.titre }} </h3>
+            <h2>{{ document.resume }}</h2>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
