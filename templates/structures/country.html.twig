@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="jumbotron text-center text-danger">
+        Les Structures existantes
+    </div>
+    <div class="container">
+        <div class="row flex">
+            {% for structure in structures %}
+                <div class="col-3">
+                    <h2 class="btn-danger">{{ structure.sigle }}</h2>
+                    <h3> {{ structure.url }} </h3>
+                    <h2>{{ structure.pays }}</h2>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
